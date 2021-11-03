@@ -1,0 +1,28 @@
+{
+  "name": "js-evaluator",
+  "version": "1.0.0",
+  "description": "js 求值器",
+  "author": "zhangchangjun <497368403@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "clean": "rimraf -g ./{dist,lib}",
+    "build": "cross-env NODE_ENV=production npm-run-all clean --parallel build:*",
+    "start": "cross-env NODE_ENV=development npm-run-all clean --parallel build:*",
+    "watch": "cross-env NODE_ENV=development run-p \"build:* --watch\"",
+    "build:js": "babel src -d lib --verbose"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.7",
+    "acorn": "^8.5.0"
+  },
+  "devDependencies": {
+    "jest": "^27.2.4",
+    "rimraf": "^3.0.2"
+  }
+}
