@@ -1,6 +1,5 @@
 # `js-evalutor`
-
-> TODO: description
+基于acorn，支持es5语法
 
 ## Usage
 ```javascript
